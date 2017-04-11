@@ -41,7 +41,10 @@ chroot $ROOTDIR apt-get install -y anacron fake-hwclock netcat-openbsd tcpdump n
 # make it pop (with mate)
 chroot $ROOTDIR apt-get install -y xorg lightdm mate-desktop-environment network-manager-gnome firefox
 # debian hamradio blend // other packages
-chroot $ROOTDIR apt-get install -y hamradio-packetmodes
+chroot $ROOTDIR apt-get install -y hamradio-antenna hamradio-datamodes \
+hamradio-digitalvoice hamradio-logging hamradio-morse hamradio-nonamateur \
+hamradio-packetmodes hamradio-rigcontrol hamradio-satellite hamradio-sdr \
+hamradio-tools hamradio-training
 
 # Add any custom config for new packages here
 
