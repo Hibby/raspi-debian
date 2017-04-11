@@ -12,6 +12,8 @@ Password: `radio`
 Dependencies
 ------------
 
+Very possibly Debian Stretch.
+
  * `apt-cacher-ng vmdebootstrap binfmt-support qemu-user-static dosfstools`
 
 Instructions
