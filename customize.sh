@@ -17,7 +17,7 @@ cp etc/apt/apt.conf.d/50raspi $ROOTDIR/etc/apt/apt.conf.d/50raspi
 chroot $ROOTDIR apt-get update
 
 # Install a blank RC.local
-cp etc/rc.local.blank $ROOTDIR/etc/rc.local
+cp etc/rc.local $ROOTDIR/etc/rc.local
 chmod a+x $ROOTDIR/etc/rc.local
 cp /etc/init.d/rc.local $ROOTDIR/etc/init.d/rc.local
 chroot $ROOTDIR update-rc.d rc.local defaults
