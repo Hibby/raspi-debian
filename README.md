@@ -12,7 +12,8 @@ Password: `radio`
 Dependencies
 ------------
 
-Very possibly Debian Stretch.
+Currently this depends on a running Debian Stretch system/VM/maybe container.
+  -  Jessie is not packaged with the signing keys for stretch, so dpkg fails.
 
  * `apt-cacher-ng vmdebootstrap binfmt-support qemu-user-static dosfstools`
 
