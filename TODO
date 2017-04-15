@@ -1,0 +1,7 @@
+* TODO Add raspi-config support
+  - https://github.com/RPi-Distro/raspi-config
+  - Prerequisite of Lua
+
+* TODO Add WiringPi support
+  - git clone && build
+
