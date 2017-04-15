@@ -24,7 +24,7 @@ chroot $ROOTDIR update-rc.d rc.local defaults
 
 # Install helpful config files for boot & kernel
 cp boot/cmdline.txt $ROOTDIR/boot/cmdline.txt
-cp boot/config.txt $ROOTDIR/boot/config.txt
+cp boot/config.txt.screen $ROOTDIR/boot/config.txt
 cp etc/fstab $ROOTDIR/etc/fstab
 cp etc/modules $ROOTDIR/etc/modules
 
@@ -37,9 +37,10 @@ SKIP_WARNING=1 SKIP_BACKUP=1 ROOT_PATH=$ROOTDIR BOOT_PATH=$ROOTDIR/boot $ROOTDIR
 
 # Install packages as requested by Tom
 chroot $ROOTDIR apt-get install -y apt-utils vim whiptail netbase less net-tools isc-dhcp-client man-db
-chroot $ROOTDIR apt-get install -y anacron fake-hwclock netcat-openbsd tcpdump ntp
-# make it pop (with mate)
-chroot $ROOTDIR apt-get install -y xorg lightdm mate-desktop-environment network-manager-gnome firefox-esr
+# Install quality of life improvements
+chroot $ROOTDIR apt-get install -y anacron fake-hwclock netcat-openbsd tcpdump ntp firmware-linux
+# make it pop (with lxde)
+chroot $ROOTDIR apt-get install -y xserver-xorg lightdm lxde wicd firefox-esr
 # debian hamradio blend // other packages
 chroot $ROOTDIR apt-get install -y hamradio-antenna hamradio-datamodes \
 hamradio-digitalvoice hamradio-logging hamradio-morse hamradio-nonamateur \

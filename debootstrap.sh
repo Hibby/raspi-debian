@@ -5,7 +5,7 @@ vmdebootstrap \
     --distribution testing \
 	--mirror http://localhost:3142/httpredir.debian.org/debian \
     --image `date +debian-testing-%Y%m%d.img` \
-    --size 3000M \
+    --size 5000M \
     --bootsize 64M \
     --boottype vfat \
     --root-password raspi \
